@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Lars van Veldhuizen
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Rood
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.texels.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  https://www.texels.nl/  
+  <img src="../Screenshots_Site/Texels.png" width="375px" alt="Home pagina van Texels bieren">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  https://www.texels.nl/bieren  
+  <img src="../Screenshots_Site/Bieren.png" width="375px" alt="Alle soorten bieren van Texels.">
  
 </details>
 
@@ -58,8 +58,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  -	De site is redelijk simpel gehouden waardoor het voor iemand met concentratieproblemen goed te doen is.
+
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  -	Screen reader is goed maar skipt alle afbeeldingen
+  -	Een var aan de afbeelding toevoegen
+
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
@@ -71,13 +75,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  -	Er is weinig content ten opzichte van ruimte daardoor staat alles heel erg uit elkaar. Voor iemand met Parkinson duurt het dan erg lang voordat hij door de site heen is.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  -	Leesbaarheid is goed op de links na, contrast slecht bij links.
+  -	Sommige plaatjes kunnen misschien wat groter/duidelijker.
+  -	Tekst in invulvelden en invulvelden is laag en niet leesbaarheid genoeg.
+  -	NL in de header niet leesbaar en te dicht op de andere links
+  -	Onze hardlopers, is het contrast van de vlakken met de achtergrond te laag
+  -	Disabled button 
+  -	De hover van buttons is af en toe niet goed zichtbaar
+
+  -	disabled button niet goed zichtbaar 
+  -	Protanopia: Links niet goed zichtbaar ten opzichte van de achterkant  
+  -	Achromatopsia: Buttons niet herkenbaar en links ook niet en taal instellen
+
+
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
