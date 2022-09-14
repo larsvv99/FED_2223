@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   https://www.texels.nl/  
-  <img src="../Screenshots_Site/Texels.png" width="375px" alt="Home pagina van Texels bieren">
+  <img src="Screenshots_Site/Texels.png" width="375px" alt="Home pagina van Texels bieren">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   https://www.texels.nl/bieren  
-  <img src="../Screenshots_Site/Bieren.png" width="375px" alt="Alle soorten bieren van Texels.">
+  <img src="Screenshots_Site/Bieren.png" width="375px" alt="Alle soorten bieren van Texels.">
  
 </details>
 

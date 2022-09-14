@@ -17,9 +17,14 @@ button, summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--font-titels: "Interstate", sans-serif;
+	--font-platte_tekst: "Garamond", sans-serif;
+	--color-huisstijl-zwart:rgb(0, 0, 0);
+	--color-huisstijl-grijs:rgb(26, 26, 26);
+	--color-huisstijl-wit:rgb(255, 255, 255);
+	--color-huisstijl-rood: rgb(204, 0, 0); 
+	--color-huisstijl-geel: rgb(255, 211, 61);
+
 }
 
 
@@ -30,10 +35,117 @@ button, summary {
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
-
 body {
   color:var(--color-text);
   background-color:var(--color-background);
+  margin: 0;
 }
 
+h2, h3{
+	text-transform: uppercase;
+}
+
+ul{
+	list-style-type: none;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+header{
+	display: grid;
+	background-color: var(--color-huisstijl-wit);
+	width: 100%;
+}
+
+header ul{
+	display: grid;
+
+}
+
+h1 img{
+	width: 5em;
+}
+
+/************/
+/* SECTIONS */
+/************/
+section{
+	padding: 15px;
+}
+
+
+/*************/
+/* SECTION 1 */
+/*************/
+
+section:nth-child(1){
+	background-image: url("/images/Achtergrond.jpeg");
+	width: 100%;
+
+}
+
+section:nth-child(1) button{
+	height: 5em;
+	width: 5em;
+	background-color: var(--color-huisstijl-rood);
+	border-radius: 5em;
+	border: none;
+
+}
+
+/*************/
+/* SECTION 2 */
+/*************/
+section:nth-child(2){
+	background-color: var(--color-huisstijl-rood);
+	width: 100%;
+
+}
+
+
+/*************/
+/* SECTION 3 */
+/*************/
+section:nth-child(3){
+	background-color: var(--color-huisstijl-geel);
+	width: 100%;
+
+}
+
+/*************/
+/* SECTION 4 */
+/*************/
+section:nth-child(4){
+	background-color: var(--color-huisstijl-grijs);
+	color: var(--color-huisstijl-wit);
+	width: 100%;
+
+
+}
+
+/*************/
+/* SECTION 5 */
+/*************/
+section:nth-child(5){
+	background-image: url("/images/Strand_met_zonsondergang.jpeg");
+	width: 100%;
+
+}
+
+/*************/
+/* SECTION 6 */
+/*************/
+section:nth-child(6){
+	background-color: var(--color-huisstijl-wit);
+	width: 100%;
+
+}
+
+/**********/
+/* FOOTER */
+/**********/
+footer{
+	background-color: var(--color-huisstijl-rood);
+}
