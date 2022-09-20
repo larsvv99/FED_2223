@@ -32,7 +32,7 @@ button, summary {
 
 
 /****************/
-/* JOUW STYLING */
+/* ALGEMEEN */
 /****************/
 
 body {
@@ -49,24 +49,196 @@ ul{
 	list-style-type: none;
 }
 
+
+
+
+
+/****************/
+/* JS CLASSLIST */
+/****************/
+.menuOpen{
+	bottom:0;
+	background-color: var(--color-huisstijl-grijs);
+	position: fixed;
+	top: 4em;
+}
+
+.tekstKleurWit{
+	color: var(--color-huisstijl-wit);
+
+}
+
+.centerMenu{
+	transform: translateY(0%);
+}
+
+
+
+
+
+
+
 /**********/
 /* HEADER */
 /**********/
 
 header{
+	width: 100%;
 	display: grid;
 	background-color: var(--color-huisstijl-wit);
-	width: 100%;
+	position:fixed;
+	bottom: -6em;
+	left:0; 
+	right:0;
+	z-index: 50;
+	transition: 0.3s;
 }
 
-header ul{
-	display: grid;
+@media (min-width:60em) {
+	header {
+		position:sticky;
+		top: 0em;
+		bottom:unset;
+		height: 4em;
+	}
+}
+
+header::after{
+	background-image: url("../images/white-paint-down.svg");
+	content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    padding-top: 30px;
+    background-position: 50%;
+    z-index: 0;
+}
+
+header button{
+	background: none;
+	border: 0;
+	position: fixed;
+	bottom: .5em;
+	left: .5em;
+}
+
+@media (min-width:60em) {
+	header button{
+		display: none;
+	}
+}
+
+header h1{
+	margin:0;
+}
+
+header nav{
+	z-index: 100;
 
 }
 
-h1 img{
+
+header nav ul{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	transform: translateY(100%);
+}
+
+@media (min-width:60em){
+	header nav ul{
+		display: flex;
+		padding-top: 1em;
+		justify-content: center;
+		flex-direction: row;
+		transform: translateY(0%);
+	}
+}
+
+header h1 img{
 	width: 5em;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
 }
+
+header nav ul li{
+	text-align: center;
+}
+
+header nav ul li:nth-child(3) {
+	margin-right: 0;
+}
+
+header nav ul li:nth-child(4) {
+	margin-left: 0;
+}
+
+
+@media (min-width:60em){
+header nav ul li:nth-child(3) {
+	margin-right: 100px;
+}
+
+header nav ul li:nth-child(4) {
+	margin-left: 169px;
+}
+}
+
+
+header nav ul li a{
+	padding: 24px;	
+	color: black;
+	font-family: var(--font-titels);
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+/********/
+/* DIVS */
+/********/
+
+body div:nth-of-type(1){
+	background-color: white;
+	position:sticky;
+	top: 0em;
+	bottom:unset;
+	height: 4em;
+	z-index: 0;
+}
+
+@media (min-width:60em){
+body div:nth-of-type(1){
+	display: none;
+}
+}
+
+body div:nth-of-type(1)::after{
+	background-image: url("../images/white-paint-down.svg");
+	content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    padding-top: 30px;
+    background-position: 50%;
+    z-index: 0;
+}
+
+
+
+
 
 /************/
 /* SECTIONS */
@@ -76,14 +248,20 @@ section{
 }
 
 
-/*************/
-/* SECTION 1 */
-/*************/
+
+
+
+/****************/
+/* VIDEO SECTION*/
+/****************/
 
 section:nth-child(1){
-	background-image: url("/images/Achtergrond.jpeg");
+	background-image: url("../images/Achtergrond.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 50em;
 	width: 100%;
-
 }
 
 section:nth-child(1) button{
@@ -94,6 +272,10 @@ section:nth-child(1) button{
 	border: none;
 
 }
+
+
+
+
 
 /*************/
 /* SECTION 2 */
@@ -114,6 +296,10 @@ section:nth-child(3){
 
 }
 
+
+
+
+
 /*************/
 /* SECTION 4 */
 /*************/
@@ -125,14 +311,22 @@ section:nth-child(4){
 
 }
 
+
+
+
+
 /*************/
 /* SECTION 5 */
 /*************/
 section:nth-child(5){
-	background-image: url("/images/Strand_met_zonsondergang.jpeg");
+	background-image: url("../images/Strand_met_zonsondergang.jpeg");
 	width: 100%;
 
 }
+
+
+
+
 
 /*************/
 /* SECTION 6 */
@@ -142,6 +336,10 @@ section:nth-child(6){
 	width: 100%;
 
 }
+
+
+
+
 
 /**********/
 /* FOOTER */
