@@ -17,7 +17,7 @@ button, summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	--font-titels: "Interstate", sans-serif;
+	--font-titels: "tgn-soft-round-con", sans-serif;
 	--font-platte_tekst: "Garamond", sans-serif;
 	--color-huisstijl-zwart:rgb(0, 0, 0);
 	--color-huisstijl-grijs:rgb(26, 26, 26);
@@ -25,6 +25,13 @@ button, summary {
 	--color-huisstijl-rood: rgb(204, 0, 0); 
 	--color-huisstijl-geel: rgb(255, 211, 61);
 
+	--header-links-kleur: var(--color-huisstijl-zwart);
+	--header-links-kleur-klein: var(--color-huisstijl-wit);
+	--header-achtergrond-kleur: var(--color-huisstijl-wit);
+	--header-achtergrond-kleur-klein: var(--color-huisstijl-grijs);
+	--button-kleur-videosectie: var(--color-huisstijl-rood);
+	--h2titel-videosectie: var(--color-huisstijl-wit);
+	--h2titel-proeflokaal: var(--color-huisstijl-wit)
 }
 
 
@@ -36,8 +43,6 @@ button, summary {
 /****************/
 
 body {
-  color:var(--color-text);
-  background-color:var(--color-background);
   margin: 0;
 }
 
@@ -53,54 +58,23 @@ ul{
 
 
 
-/****************/
-/* JS CLASSLIST */
-/****************/
-.menuOpen{
-	bottom:0;
-	background-color: var(--color-huisstijl-grijs);
-	position: fixed;
-	top: 4em;
-}
-
-.tekstKleurWit{
-	color: var(--color-huisstijl-wit);
-
-}
-
-.centerMenu{
-	transform: translateY(0%);
-}
-
-
-
-
-
-
-
 /**********/
 /* HEADER */
 /**********/
 
 header{
-	width: 100%;
 	display: grid;
-	background-color: var(--color-huisstijl-wit);
-	position:fixed;
-	bottom: -6em;
-	left:0; 
-	right:0;
+	background-color: var(--header-achtergrond-kleur);
+	position:sticky;
+	min-height: 4em;
+	top: 0;
 	z-index: 50;
-	transition: 0.3s;
 }
 
-@media (min-width:60em) {
-	header {
-		position:sticky;
-		top: 0em;
-		bottom:unset;
-		height: 4em;
-	}
+header{
+	min-height: 4em;
+	top: 0;
+	z-index: 50;
 }
 
 header::after{
@@ -116,18 +90,28 @@ header::after{
     z-index: 0;
 }
 
-header button{
-	background: none;
-	border: 0;
+
+
+
+
+/*******/
+/* NAV */
+/*******/
+
+header nav {
 	position: fixed;
-	bottom: .5em;
-	left: .5em;
+	bottom: 0; 
+	left: 0;
+	right:0;
+	background-color: white;
 }
 
-@media (min-width:60em) {
-	header button{
-		display: none;
-	}
+header nav button{
+	background: none;
+	border: 0;
+	z-index: 50;
+	position: relative;
+	background-color: white;
 }
 
 header h1{
@@ -139,12 +123,25 @@ header nav{
 
 }
 
-
 header nav ul{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	transform: translateY(100%);
+	position: fixed;
+	inset: 0;
+	background-color: var(--header-achtergrond-kleur-klein);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+header.menuOpen nav ul{
+	transform: translateY(0);
+}
+
+header.menuOpen nav ul li a{
+	color: var(--header-links-kleur-klein);
 }
 
 @media (min-width:60em){
@@ -179,7 +176,6 @@ header nav ul li:nth-child(4) {
 	margin-left: 0;
 }
 
-
 @media (min-width:60em){
 header nav ul li:nth-child(3) {
 	margin-right: 100px;
@@ -190,51 +186,37 @@ header nav ul li:nth-child(4) {
 }
 }
 
-
 header nav ul li a{
 	padding: 24px;	
-	color: black;
 	font-family: var(--font-titels);
 	text-decoration: none;
+	color: var(--header-links-kleur);
+}
+
+@media (min-width:60em) {
+	header nav{
+		position: relative;
+		background-color: transparent;	
+	}
+
+	header nav button{
+		display: none;
+	}
+
+	header nav ul{
+		position: relative;
+		background-color: transparent;
+	}
+
+	header.menuOpen nav ul li a{
+		color: var(--header-links-kleur);
+	}
 }
 
 
 
 
 
-
-
-/********/
-/* DIVS */
-/********/
-
-body div:nth-of-type(1){
-	background-color: white;
-	position:sticky;
-	top: 0em;
-	bottom:unset;
-	height: 4em;
-	z-index: 0;
-}
-
-@media (min-width:60em){
-body div:nth-of-type(1){
-	display: none;
-}
-}
-
-body div:nth-of-type(1)::after{
-	background-image: url("../images/white-paint-down.svg");
-	content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    padding-top: 30px;
-    background-position: 50%;
-    z-index: 0;
-}
 
 
 
@@ -243,6 +225,7 @@ body div:nth-of-type(1)::after{
 /************/
 /* SECTIONS */
 /************/
+
 section{
 	padding: 15px;
 }
@@ -262,15 +245,17 @@ section:nth-child(1){
 	background-repeat: no-repeat;
 	height: 50em;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
 }
 
 section:nth-child(1) button{
 	height: 5em;
 	width: 5em;
-	background-color: var(--color-huisstijl-rood);
+	background-color: var(--button-kleur-videosectie);
 	border-radius: 5em;
 	border: none;
-
 }
 
 
@@ -285,6 +270,14 @@ section:nth-child(2){
 	width: 100%;
 
 }
+
+section:nth-child(2) h2{
+	font-family: var(--font-titels);
+	color: var(--h2titel-proeflokaal);
+}
+
+
+
 
 
 /*************/
@@ -307,8 +300,6 @@ section:nth-child(4){
 	background-color: var(--color-huisstijl-grijs);
 	color: var(--color-huisstijl-wit);
 	width: 100%;
-
-
 }
 
 
@@ -321,7 +312,6 @@ section:nth-child(4){
 section:nth-child(5){
 	background-image: url("../images/Strand_met_zonsondergang.jpeg");
 	width: 100%;
-
 }
 
 
@@ -334,7 +324,6 @@ section:nth-child(5){
 section:nth-child(6){
 	background-color: var(--color-huisstijl-wit);
 	width: 100%;
-
 }
 
 

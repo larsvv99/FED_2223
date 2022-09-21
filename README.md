@@ -143,10 +143,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+- Hoe kan ik het beste mijn css structureren?
+- background-image werkt niet, waar ligt dat aan?
+- Is het gebruikelijk om af te wisselen in display grid en flex?
 
 </details>
 
@@ -171,6 +170,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
+
+  - Hoe kan ik het beste mijn links uitlijnen ten opzichte van?
+  - De icons kan ik het beste met noun project worden gelinkt toch?
+  - Hoe kan ik het beste de uitklapmenu's opbouwen
+  - Hoe komt texels beleving recht onder elkaar als het scherm kleiner wordt?
+  
 
 
   ### Verslag van meeting
