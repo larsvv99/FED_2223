@@ -127,7 +127,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik had nog niet echt last van moeilijkheden qua coderen, de html had ik goed gestructureerd.
+  Wel had ik nog wat problemen met het linken van mijn achtergrondafbeeldingen. Ook vind ik het nog
+  lastig om mijn css goed te structureren.
 
 
   ### Agenda voor meeting
@@ -139,13 +141,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
 - Hoe kan ik het beste mijn css structureren?
 - background-image werkt niet, waar ligt dat aan?
 - Is het gebruikelijk om af te wisselen in display grid en flex?
+
+  ### Verslag van meeting
+  hier na afloop snel de uitkomsten van de meeting vastleggen
+  - Je kan gebruik maken van een hulplijst van Sanne
+
+
 
 </details>
 
@@ -159,8 +163,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  De menu was wat lastiger om te maken maar met een beetje ondersteuning van Sanne ging het
+  uiteindelijk wel. Ook ben ik begonnen met de productensectie maar de buttons bleven uitsteken.
+  <img src="readme-images/Producten.jpg" width="375px" alt="uitomst opdracht 1">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -181,10 +186,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - opschrijven waar je hulp bij gehad hebt als bronnen
+  - bronnenlijst toevoegen
+  - image naar img veranderen
+  - images alt tekst geven
+  - let op dubbele css
+
 
 </details>
 
@@ -236,7 +243,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Het coderen in zijn algemeen ging eigenlijk wel goed, soms vergeet ik alleen te beginnen met het ontwerp in het klein.
+  Ook moet ik het nog beter leren begrijpen, qua media query. Ook twijfel ik af en toe of ik wel een div mag gebruiken.
+  Bij het maken van het formulier ben ik ook nog tegen een aantal dingen aangelopen.
+  <img src="readme-images/Formulier.jpg" width="375px" alt="uitomst opdracht 1">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -247,6 +257,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  - Hoe krijg ik een andere kleur outline geven
+  - Hoe kan ik het beste de tekst na het aanvink vakje plaatsen
+  - Hoe krijg ik het voor elkaar om een button disabled te maken en vervolgens, abled te maken als er op de aanvinkinput wordt geklikt?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

@@ -1,5 +1,4 @@
 // JavaScript Document
-console.log("hi");
 
 var menuButton = document.querySelector("header nav button");
 

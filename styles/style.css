@@ -5,9 +5,7 @@
   box-sizing:border-box;  
 }
 
-button, summary {
-	cursor: pointer;
-}
+
 
 
 
@@ -17,21 +15,61 @@ button, summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
+	/* HUISSTIJL */
 	--font-titels: "tgn-soft-round-con", sans-serif;
-	--font-platte_tekst: "Garamond", sans-serif;
+	--font-platte_tekst: "TheMix", sans-serif;
 	--color-huisstijl-zwart:rgb(0, 0, 0);
-	--color-huisstijl-grijs:rgb(26, 26, 26);
+	--color-huisstijl-grijs:#333333;
 	--color-huisstijl-wit:rgb(255, 255, 255);
 	--color-huisstijl-rood: rgb(204, 0, 0); 
 	--color-huisstijl-geel: rgb(255, 211, 61);
 
+	/* LINKS */
+	--link-licht: var(--color-huisstijl-wit);
+	--link-licht-tekst: var(--color-huisstijl-rood);
+	--link-donker: var(--color-huisstijl-rood);
+	--link-donker-tekst: var(--color-huisstijl-wit);
+	--link-hover: var(--color-huisstijl-zwart);
+	--link-hover-tekst: var(--color-huisstijl-wit);
+	--link-active: var(--color-huisstijl-zwart);
+	--link-active-tekst: var(--color-huisstijl-wit);
+	--disabled-button-achtergrond-kleur: #ddd;
+	--disabled-button-tekst-kleur: var(--color-huisstijl-grijs);
+
+
+	/* HEADER */
 	--header-links-kleur: var(--color-huisstijl-zwart);
 	--header-links-kleur-klein: var(--color-huisstijl-wit);
 	--header-achtergrond-kleur: var(--color-huisstijl-wit);
 	--header-achtergrond-kleur-klein: var(--color-huisstijl-grijs);
+
+	/* VIDEO SECTION */
 	--button-kleur-videosectie: var(--color-huisstijl-rood);
 	--h2titel-videosectie: var(--color-huisstijl-wit);
-	--h2titel-proeflokaal: var(--color-huisstijl-wit)
+
+	/* PROEFLOKAAL SECTION */
+	--h2titel-proeflokaal: var(--color-huisstijl-wit);
+	--plattetekst-proeflokaal: var(--color-huisstijl-wit);
+
+	/* PRODUCTEN SECTION */
+	--h2titel-producten: var(--color-huisstijl-zwart);
+	--plattetekst-producten: var(--color-huisstijl-zwart);
+	--product-achtergrond: var(--color-huisstijl-wit);
+
+	/* KEN JE ONS SECTION */
+	--kenjeons-achtergrond-kleur: var(--color-huisstijl-grijs);
+	--h2titel-kenjeons: var(--color-huisstijl-wit);
+	--plattetekst-kenjeons: var(--color-huisstijl-wit);
+
+	/* VERHAAL SECTION */
+	--h2titel-verhaal: var(--color-huisstijl-wit);
+	--plattetekst-verhaal: var(--color-huisstijl-wit);
+	--verhaal-achtergrond-kleur: var(--color-huisstijl-rood);
+
+	/* NIEUWSBRIEF SECTION */
+
+	/* FOOTER */
+	--footer-plattetekst: var(--color-huisstijl-wit);
 }
 
 
@@ -46,12 +84,22 @@ body {
   margin: 0;
 }
 
-h2, h3{
+a, h2, h3{
+	font-family: var(--font-titels);
 	text-transform: uppercase;
+	text-align: center;
+}
+
+p, figcaption{
+	font-family: var(--font-platte_tekst);
 }
 
 ul{
 	list-style-type: none;
+}
+
+button, summary {
+	cursor: pointer;
 }
 
 
@@ -66,12 +114,6 @@ header{
 	display: grid;
 	background-color: var(--header-achtergrond-kleur);
 	position:sticky;
-	min-height: 4em;
-	top: 0;
-	z-index: 50;
-}
-
-header{
 	min-height: 4em;
 	top: 0;
 	z-index: 50;
@@ -103,11 +145,13 @@ header nav {
 	bottom: 0; 
 	left: 0;
 	right:0;
+	padding: .5em;
 	background-color: white;
+	z-index: 100;
+
 }
 
 header nav button{
-	background: none;
 	border: 0;
 	z-index: 50;
 	position: relative;
@@ -118,14 +162,9 @@ header h1{
 	margin:0;
 }
 
-header nav{
-	z-index: 100;
-
-}
-
 header nav ul{
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	flex-direction: column;
 	transform: translateY(100%);
 	position: fixed;
@@ -144,7 +183,7 @@ header.menuOpen nav ul li a{
 	color: var(--header-links-kleur-klein);
 }
 
-@media (min-width:60em){
+@media (min-width: 75em){
 	header nav ul{
 		display: flex;
 		padding-top: 1em;
@@ -165,6 +204,8 @@ header h1 img{
 }
 
 header nav ul li{
+	display: flex;
+	justify-content: center;
 	text-align: center;
 }
 
@@ -176,24 +217,33 @@ header nav ul li:nth-child(4) {
 	margin-left: 0;
 }
 
-@media (min-width:60em){
+header nav ul li:nth-child(6) {
+	margin-right: 0;
+}
+
+@media (min-width:75em){
 header nav ul li:nth-child(3) {
-	margin-right: 100px;
+	margin-right: 6em;
 }
 
 header nav ul li:nth-child(4) {
-	margin-left: 169px;
+	margin-left: 6em;
+}
+header nav ul li:nth-child(6) {
+	margin-right: -4em;
 }
 }
 
 header nav ul li a{
-	padding: 24px;	
+	margin-left: 2em;	
+	margin-right: 2em;
 	font-family: var(--font-titels);
 	text-decoration: none;
 	color: var(--header-links-kleur);
+	text-align: center;
 }
 
-@media (min-width:60em) {
+@media (min-width:75em) {
 	header nav{
 		position: relative;
 		background-color: transparent;	
@@ -227,7 +277,7 @@ header nav ul li a{
 /************/
 
 section{
-	padding: 15px;
+	padding: 1em;
 }
 
 
@@ -262,68 +312,309 @@ section:nth-child(1) button{
 
 
 
-/*************/
-/* SECTION 2 */
-/*************/
+/***********************/
+/* PROEFLOKAAL SECTION */
+/***********************/
+
 section:nth-child(2){
 	background-color: var(--color-huisstijl-rood);
 	width: 100%;
-
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	
 }
 
-section:nth-child(2) h2{
-	font-family: var(--font-titels);
+section:nth-child(2) div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1em;
+} 
+
+
+section:nth-child(2) div h2{
 	color: var(--h2titel-proeflokaal);
 }
 
+section:nth-child(2) div p{
+	color: var(--plattetekst-proeflokaal);
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+section:nth-child(2) div a{
+	background-color: var(--link-licht);
+	color: var(--link-licht-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+	margin-top: 1em;
+	width: fit-content;
+}
+
+section:nth-child(2) div a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+section:nth-child(2) div a:active{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+section:nth-child(2) img{
+	width: auto;
+	margin: 1em;
+}
+
+@media (min-width:68em){
+	section:nth-child(2){
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	section:nth-child(2) div{
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		text-align: left;
+		width: 30em;
+	}
+	section:nth-child(2) img{
+		width: 30em;
+	}
+
+
+	section:nth-child(2) div a{
+		margin: 0;
+	}
+}
 
 
 
-
-/*************/
-/* SECTION 3 */
-/*************/
+/*********************/
+/* PRODUCTEN SECTION */
+/*********************/
 section:nth-child(3){
 	background-color: var(--color-huisstijl-geel);
 	width: 100%;
-
 }
 
+section:nth-child(3) ul{
+	display: flex;
+	justify-content: center;
+	gap:1em;
+	padding:1em;
+	flex-wrap: wrap;
+}
 
+section:nth-child(3) ul li{
+	background-color: var(--product-achtergrond);
+	width: 20em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding:1em;
+}	
 
-
-
-/*************/
-/* SECTION 4 */
-/*************/
-section:nth-child(4){
-	background-color: var(--color-huisstijl-grijs);
-	color: var(--color-huisstijl-wit);
+section:nth-child(3) ul li figure img{
 	width: 100%;
 }
 
+section:nth-child(3) a{
+	background-color: var(--link-donker);
+	color: var(--link-donker-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+	margin-top:auto;
+}
+
+section:nth-child(3) a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+section:nth-child(3) a:active{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
 
 
 
 
-/*************/
-/* SECTION 5 */
-/*************/
+
+/**********************/
+/* KEN JE ONS SECTION */
+/**********************/
+section:nth-child(4){
+	background-color: var(--kenjeons-achtergrond-kleur);
+	color: var(--h2titel-kenjeons);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+section:nth-child(4) div{
+	margin: auto;
+	max-width: 30em;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	order: 2;
+}
+
+
+section:nth-child(4) img{
+	width: 96%;
+	order: 1;
+}
+
+@media (min-width:62em){
+	section:nth-child(4){
+		padding-top: 10em;
+		padding-bottom: 10em;
+	}
+
+	section:nth-child(4) div{
+		order: 1;
+	}
+
+	section:nth-child(4) img{
+		order: 2;
+		max-width: 30em;
+	}
+}
+
+
+
+
+
+
+
+/*******************/
+/* VERHAAL SECTION */
+/*******************/
 section:nth-child(5){
 	background-image: url("../images/Strand_met_zonsondergang.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: 100%;
+	display: flex;
+	justify-content: right;
+	height: fit-content;
+	padding: 0;
+}
+
+section:nth-child(5) div{
+	background-color: var(--verhaal-achtergrond-kleur);
+	width: 100%;
+	height: 100%;
+	padding: 2em;
+	margin: 0;
+	color: var(--h2titel-verhaal);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+@media (min-width:36em){
+	section:nth-child(5) div{
+		background-color: transparent;
+		background-image: url("../images/verfkwast-box.svg");
+		width: 30em;
+		height: 25em;
+		background-repeat: no-repeat;
+		background-size:contain;
+		margin: 2em;
+	}
+}
+
+section:nth-child(5) a{
+	background-color: var(--link-licht);
+	color: var(--link-licht-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+}
+
+section:nth-child(5) a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+section:nth-child(5) a:active{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
 }
 
 
 
 
 
-/*************/
-/* SECTION 6 */
-/*************/
+/***********************/
+/* NIEUWSBRIEF SECTION */
+/***********************/
 section:nth-child(6){
 	background-color: var(--color-huisstijl-wit);
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section:nth-child(6) p{
+	text-align: center;
+	max-width: 40em;
+}
+
+section:nth-child(6) form{
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	font-family: var(--font-platte_tekst);
+	width: 100%;
+}
+
+section:nth-child(6) form input{
+	margin-bottom: 1em;
+}
+
+section:nth-child(6) form input:nth-of-type(5){
+	background-color: var(--disabled-button-achtergrond-kleur);
+	color: var(--disabled-button-tekst-kleur);
+	padding: 1em;
+	font-family: var(--font-titels);
+	font-size: 1em;
+	text-decoration: none;
+	border: none;
+	-webkit-appearance: none;
+}
+
+section:nth-child(6) form input:nth-of-type(-n+3){
+	width: 100%;
+	height: 2.5em;	
+	
+}
+
+section:nth-child(6) form label:nth-of-type(-n+3)::after {
+	content: "*";
+	color: var(--color-huisstijl-rood);
+}
+
+@media (min-width:36em){
+	section:nth-child(6) form{
+	max-width: 40em;
+	}
 }
 
 
@@ -334,5 +625,46 @@ section:nth-child(6){
 /* FOOTER */
 /**********/
 footer{
+	padding: 2em;
+	padding-bottom: 4em;
 	background-color: var(--color-huisstijl-rood);
+
+}
+
+footer div{
+	display: flex;
+}
+
+footer div:nth-child(1){
+	justify-content: space-between;
+}
+
+footer div:nth-child(2) img{
+	max-width: 2em;
+	margin: .5em;
+}
+
+footer img:nth-of-type(1){
+	max-width: 15em;
+}
+
+footer ul{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: -2.5em;
+}
+
+footer ul li{
+	margin: 1em;
+	
+} 
+
+footer ul li a{
+	color: var(--footer-plattetekst);
+	text-decoration: none;
+}
+
+footer ul li a:hover{
+	text-decoration: underline;
 }
