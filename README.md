@@ -107,7 +107,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/HTML_attributen.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -257,9 +257,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  BRYAN
+  - kan ik 2 style sheet gebruiken of moet ik meteen 3 gebruiken? 
+  - ziet mijn html en css code er to nu toe er goed uit?  
+  - hoe verandere ik de kleur van de svg bestand in css
+
+  LARS
   - Hoe krijg ik een andere kleur outline geven
   - Hoe kan ik het beste de tekst na het aanvink vakje plaatsen
-  - Hoe krijg ik het voor elkaar om een button disabled te maken en vervolgens, abled te maken als er op de aanvinkinput wordt geklikt?
+  - Hoe krijg ik het voor elkaar om een button disabled te maken en vervolgens, abled te maken als er op de aanvinkinput wordt      geklikt?
+
+  ZENNAY
+  - Hoe kan ik mijn site responsive maken en de portfolio blokken naast elkaar zetten als het scherm groter word
+  - Hoe krijg ik een streepje achter mijn tekst zoals eerst.
+  - Hoe krijg ik mijn svg logo mooi in het scherm.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
