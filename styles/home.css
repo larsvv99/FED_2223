@@ -1,0 +1,455 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+	/* VIDEO SECTION */
+	--button-kleur-videosectie: var(--color-huisstijl-rood);
+	--h2titel-videosectie: var(--color-huisstijl-wit);
+
+	/* PROEFLOKAAL SECTION */
+	--h2titel-proeflokaal: var(--color-huisstijl-wit);
+	--plattetekst-proeflokaal: var(--color-huisstijl-wit);
+
+	/* PRODUCTEN SECTION */
+	--h2titel-producten: var(--color-huisstijl-zwart);
+	--plattetekst-producten: var(--color-huisstijl-zwart);
+	--product-achtergrond: var(--color-huisstijl-wit);
+
+	/* KEN JE ONS SECTION */
+	--kenjeons-achtergrond-kleur: var(--color-huisstijl-grijs);
+	--h2titel-kenjeons: var(--color-huisstijl-wit);
+	--plattetekst-kenjeons: var(--color-huisstijl-wit);
+
+	/* VERHAAL SECTION */
+	--h2titel-verhaal: var(--color-huisstijl-wit);
+	--plattetekst-verhaal: var(--color-huisstijl-wit);
+	--verhaal-achtergrond-kleur: var(--color-huisstijl-rood);
+
+	/* NIEUWSBRIEF SECTION */
+	--outline-form-kleur: var(--color-accent-kleur); 
+}
+
+
+
+
+
+
+/**********/
+/* HEADER */
+/**********/
+
+header h1 img{
+	width: 5em;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+header h1{
+	margin:0;
+}
+
+
+
+
+
+/************/
+/* SECTIONS */
+/************/
+
+section{
+	padding: 1em;
+	position: relative;
+}
+
+
+
+
+
+/****************/
+/* VIDEO SECTION*/
+/****************/
+
+main section:nth-child(1){
+	background-image: url("../images/Achtergrond.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 50em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+main section:nth-child(1) button{
+	height: 5em;
+	width: 5em;
+	background-color: var(--button-kleur-videosectie);
+	border-radius: 5em;
+	border: none;
+}
+
+
+
+
+
+/***********************/
+/* PROEFLOKAAL SECTION */
+/***********************/
+
+main section:nth-child(2){
+	background-color: var(--color-huisstijl-rood);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+main section:nth-child(2) div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1em;
+} 
+
+main section:nth-child(2)::before{
+	background-image: url("../images/divider.svg");
+	content: ".";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: calc(100% - 0.5px);
+    left: 0;
+	right: 0;
+    background-position: 50%;
+    z-index: 0;
+	color: var(--color-huisstijl-rood);
+}
+
+main section:nth-child(2) div h2{
+	color: var(--h2titel-proeflokaal);
+}
+
+main section:nth-child(2) div p{
+	color: var(--plattetekst-proeflokaal);
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+main section:nth-child(2) div a{
+	background-color: var(--link-licht);
+	color: var(--link-licht-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+	margin-top: 1em;
+	width: fit-content;
+}
+
+main section:nth-child(2) div a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+
+main section:nth-child(2) img{
+	width: auto;
+	margin: 1em;
+}
+
+@media (min-width:68em){
+	main section:nth-child(2){
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	main section:nth-child(2) div{
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		text-align: left;
+		width: 30em;
+	}
+	main section:nth-child(2) img{
+		width: 30em;
+	}
+
+
+	main section:nth-child(2) div a{
+		margin: 0;
+	}
+}
+
+
+
+
+
+/*********************/
+/* PRODUCTEN SECTION */
+/*********************/
+
+main section:nth-child(3)::before{
+	background-image: url("../images/divider-gold-up.svg");
+	content: ".";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: calc(100% - 0.5px);
+    left: 0;
+	right: 0;
+    background-position: 50%;
+    z-index: 0;
+	color: var(--color-huisstijl-geel);
+}
+
+main section:nth-child(3){
+	background-color: var(--color-huisstijl-geel);
+	width: 100%;
+}
+
+main section:nth-child(3) ul{
+	display: flex;
+	justify-content: center;
+	gap:1em;
+	padding:1em;
+	flex-wrap: wrap;
+}
+
+main section:nth-child(3) ul li{
+	background-color: var(--product-achtergrond);
+	width: 20em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding:1em;
+}	
+
+main section:nth-child(3) ul li figure img{
+	width: 100%;
+}
+
+main section:nth-child(3) a{
+	background-color: var(--link-donker);
+	color: var(--link-donker-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+	margin-top:auto;
+}
+
+main section:nth-child(3) a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+
+
+
+
+
+/**********************/
+/* KEN JE ONS SECTION */
+/**********************/
+
+main section:nth-child(4)::before{
+	background-image: url("../images/divider-black-up.svg");
+	content: ".";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: calc(100% - 0.5px);
+    left: 0;
+	right: 0;
+    background-position: 50%;
+    z-index: 0;
+	color: var(--color-huisstijl-grijs);
+}
+
+main section:nth-child(4){
+	background-color: var(--kenjeons-achtergrond-kleur);
+	color: var(--h2titel-kenjeons);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+main section:nth-child(4) div{
+	margin: auto;
+	max-width: 30em;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	order: 2;
+}
+
+
+main section:nth-child(4) img{
+	width: 96%;
+	order: 1;
+}
+
+@media (min-width:62em){
+	main section:nth-child(4){
+		padding-top: 10em;
+		padding-bottom: 10em;
+	}
+
+	main section:nth-child(4) div{
+		order: 1;
+	}
+
+	main section:nth-child(4) img{
+		order: 2;
+		max-width: 30em;
+	}
+}
+
+
+
+
+
+/*******************/
+/* VERHAAL SECTION */
+/*******************/
+
+main section:nth-child(5){
+	background-image: url("../images/Strand_met_zonsondergang.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	display: flex;
+	justify-content: right;
+	height: fit-content;
+	padding: 0;
+}
+
+main section:nth-child(5) div{
+	background-color: var(--verhaal-achtergrond-kleur);
+	width: 100%;
+	height: 100%;
+	padding: 2em;
+	margin: 0;
+	color: var(--h2titel-verhaal);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+@media (min-width:36em){
+	main section:nth-child(5) div{
+		background-color: transparent;
+		background-image: url("../images/verfkwast-box.svg");
+		width: 30em;
+		height: 25em;
+		background-repeat: no-repeat;
+		background-size:contain;
+		margin: 2em;
+	}
+}
+
+main section:nth-child(5) a{
+	background-color: var(--link-licht);
+	color: var(--link-licht-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+}
+
+main section:nth-child(5) a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+
+
+
+
+
+/***********************/
+/* NIEUWSBRIEF SECTION */
+/***********************/
+
+main section:nth-child(6){
+	background-color: var(--color-huisstijl-wit);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main section:nth-child(6) button{
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+	border: none;
+	display: block;
+}
+
+main section:nth-child(6) button[disabled]{
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+	border: none;
+}
+
+.enabled{
+	background-color: var(--link-active);
+	color: var(--link-active-tekst);
+}
+
+main section:nth-child(6) p{
+	text-align: center;
+	max-width: 40em;
+}
+
+main section:nth-child(6) form{
+
+	font-family: var(--font-platte_tekst);
+	width: 100%;
+}
+
+main section:nth-child(6) form input{
+	margin-bottom: 1em;
+}
+
+main section:nth-child(6) form input:nth-of-type(5){
+	background-color: var(--disabled-button-achtergrond-kleur);
+	color: var(--disabled-button-tekst-kleur);
+	padding: 1em;
+	font-family: var(--font-titels);
+	font-size: 1em;
+	text-decoration: none;
+	border: none;
+	-webkit-appearance: none;
+}
+
+main section:nth-child(6) form input:nth-of-type(-n+3){
+	width: 100%;
+	height: 3em;	
+	border: solid 2px var(--color-accent-kleur);
+}
+
+main section:nth-child(6) form label:nth-of-type(-n+3)::after {
+	content: "*";
+	color: var(--color-huisstijl-rood);
+}
+
+@media (min-width:36em){
+	main section:nth-child(6) form{
+	max-width: 40em;
+	}
+}
+

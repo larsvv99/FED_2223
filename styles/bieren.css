@@ -1,0 +1,259 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+    /* ONDERNAV SECTIE */
+    --nav-achtergrond-kleur: var(--color-huisstijl-zwart);
+    --tekstkleur-ondernav: var(--color-huisstijl-wit);
+
+    /* H1 SECTIE */
+    --tekstkleur-h1: var(--color-huisstijl-wit);
+
+
+    /* SKUUMKOPPE SECTIE */
+    --skuumkoppe-sectie-achtergrond-kleur: var(--color-accent-kleur);
+    --skuumkoppe-sectie-tekstkleur: var(--color-huisstijl-wit);
+
+    /* BLOND SECTIE */
+    --blond-sectie-achtergrond-kleur: var(--color-huisstijl-geel);
+    --blond-sectie-tekstkleur: var(--color-huisstijl-zwart);
+
+    /* BOCK SECTIE */
+    --bock-sectie-achtergrond-kleur: var(--color-huisstijl-overig);
+    --bock-sectie-tekstkleur: var(--color-huisstijl-wit);
+
+}
+
+
+
+
+
+/************/
+/* ALGEMEEN */
+/************/
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+/**********/
+/* HEADER */
+/**********/
+
+header a img{
+	width: 10em;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	transform: translateX(-50%);
+	z-index: 50;
+}
+
+header a{
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/*******************/
+/* SECTIES */
+/*******************/
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5em
+}
+
+main section div{
+    max-width: 30em;
+}
+
+main section img{
+    max-width: 30em;
+}
+
+main section div p:nth-of-type(1){
+    font-weight: bold;
+}
+
+main section div p:nth-of-type(2){
+    margin-bottom: 1em;
+}
+
+main section div ul{
+    display: flex;
+    gap: 2em;
+    justify-content: left;
+    margin-top: 2em;
+    padding-inline-start: 0;
+}
+
+main section div a{
+	background-color: var(--link-donker);
+	color: var(--link-donker-tekst);
+	padding: 1em;
+	font-family: var(--font-titels);
+	text-decoration: none;
+    margin-top: 4em;
+}
+
+main section div a:hover{
+	background-color: var(--link-hover);
+	color: var(--link-hover-tekst);
+}
+
+@media (min-width:61em){
+    main section{
+        flex-direction: row;
+    }
+}
+
+
+
+
+
+/*******************/
+/* ONDERNAV SECTIE */
+/*******************/
+
+main section:nth-of-type(1){
+    background-color: var(--nav-achtergrond-kleur);
+    z-index: 25;
+}
+
+main section nav{
+    background-color: var(--nav-achtergrond-kleur);
+    position: fixed;
+    top: 4em;
+    width: 100%;
+}
+
+main section nav ul{
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    gap: 2em;
+}
+
+main section nav ul li a{
+    color: var(--tekstkleur-ondernav);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+/*************/
+/* H1 SECTIE */
+/*************/
+
+main section:nth-of-type(2){
+    background-image: url("../images/Texels_Bierselectie_taplenzen.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10em;
+    padding-bottom: 8em;
+}
+
+
+
+
+
+/*********************/
+/* SKUUMKOPPE SECTIE */
+/*********************/
+
+main section:nth-of-type(3){
+    background-color: var(--skuumkoppe-sectie-achtergrond-kleur);
+    color: var(--skuumkoppe-sectie-tekstkleur);
+    position: relative;
+}
+
+main section:nth-of-type(3) img{
+    order: 1;
+}
+
+main section:nth-of-type(3) div{
+    order: 2;
+}
+
+
+
+
+
+
+
+/****************/
+/* BLOND SECTIE */
+/****************/
+
+main section:nth-of-type(4){
+    background-color: var(--blond-sectie-achtergrond-kleur);
+    color: var(--blond-sectie-tekstkleur);
+    position: relative;
+}
+
+
+
+
+
+/***************/
+/* BOCK SECTIE */
+/***************/
+
+main section:nth-of-type(5){
+    background-color: var(--bock-sectie-achtergrond-kleur);
+    color: var(--bock-sectie-tekstkleur);
+    position: relative;
+}
+
+main section:nth-of-type(5) img{
+    order: 1;
+}
+
+main section:nth-of-type(5) div{
+    order: 2;
+}
+
+
+
+
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer section:nth-of-type(1){
+    position: relative;
+}
+
+
+footer section:nth-of-type(1):after{
+    margin-top: 1em;
+}
+
+footer section:nth-of-type(2){
+    margin-top: 2em;
+}

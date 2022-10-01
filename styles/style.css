@@ -9,20 +9,30 @@
 
 
 
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* HUISSTIJL */
+	--font-h1: "Have Heart, sans-serif";
 	--font-titels: "tgn-soft-round-con", sans-serif;
 	--font-platte_tekst: "TheMix", sans-serif;
 	--color-huisstijl-zwart:rgb(0, 0, 0);
 	--color-huisstijl-grijs:#333333;
 	--color-huisstijl-wit:rgb(255, 255, 255);
 	--color-huisstijl-rood: rgb(204, 0, 0); 
-	--color-huisstijl-geel: rgb(255, 211, 61);
+	--color-huisstijl-geel: rgb(241 207 144);
+	--color-huisstijl-overig: rgb(191 112 47);
+	--color-accent-kleur: rgb(246 167 0);
+
+	/* HEADER */
+	--header-links-kleur: var(--color-huisstijl-zwart);
+	--header-links-kleur-klein: var(--color-huisstijl-wit);
+	--header-achtergrond-kleur: var(--color-huisstijl-wit);
+	--header-achtergrond-kleur-klein: var(--color-huisstijl-grijs);
+
+	/* NAV */
+	--header-hover-tekst-kleur: var(--color-huisstijl-rood);
 
 	/* LINKS */
 	--link-licht: var(--color-huisstijl-wit);
@@ -31,64 +41,44 @@
 	--link-donker-tekst: var(--color-huisstijl-wit);
 	--link-hover: var(--color-huisstijl-zwart);
 	--link-hover-tekst: var(--color-huisstijl-wit);
-	--link-active: var(--color-huisstijl-zwart);
+	--link-active: var(--color-huisstijl-rood);
 	--link-active-tekst: var(--color-huisstijl-wit);
 	--disabled-button-achtergrond-kleur: #ddd;
 	--disabled-button-tekst-kleur: var(--color-huisstijl-grijs);
 
-
-	/* HEADER */
-	--header-links-kleur: var(--color-huisstijl-zwart);
-	--header-links-kleur-klein: var(--color-huisstijl-wit);
-	--header-achtergrond-kleur: var(--color-huisstijl-wit);
-	--header-achtergrond-kleur-klein: var(--color-huisstijl-grijs);
-
-	/* VIDEO SECTION */
-	--button-kleur-videosectie: var(--color-huisstijl-rood);
-	--h2titel-videosectie: var(--color-huisstijl-wit);
-
-	/* PROEFLOKAAL SECTION */
-	--h2titel-proeflokaal: var(--color-huisstijl-wit);
-	--plattetekst-proeflokaal: var(--color-huisstijl-wit);
-
-	/* PRODUCTEN SECTION */
-	--h2titel-producten: var(--color-huisstijl-zwart);
-	--plattetekst-producten: var(--color-huisstijl-zwart);
-	--product-achtergrond: var(--color-huisstijl-wit);
-
-	/* KEN JE ONS SECTION */
-	--kenjeons-achtergrond-kleur: var(--color-huisstijl-grijs);
-	--h2titel-kenjeons: var(--color-huisstijl-wit);
-	--plattetekst-kenjeons: var(--color-huisstijl-wit);
-
-	/* VERHAAL SECTION */
-	--h2titel-verhaal: var(--color-huisstijl-wit);
-	--plattetekst-verhaal: var(--color-huisstijl-wit);
-	--verhaal-achtergrond-kleur: var(--color-huisstijl-rood);
-
-	/* NIEUWSBRIEF SECTION */
-
 	/* FOOTER */
+	--achtergrondkleur-footer: var(--color-huisstijl-rood);
 	--footer-plattetekst: var(--color-huisstijl-wit);
 	--divider-kleur: var(--color-huisstijl-wit);
+	
 }
 
 
 
 
 
-/****************/
+/************/
 /* ALGEMEEN */
-/****************/
+/************/
 
 body {
   margin: 0;
 }
 
-a, h2, h3{
-	font-family: var(--font-titels);
+h1{
+	font-family: var(--font-h1);
+	color: var(--tekstkleur-h1);
+	text-shadow: 0 0 6px#333333;
+	font-size: 2em;
+}
+
+h1, h2, h3, a{
 	text-transform: uppercase;
 	text-align: center;
+}
+
+a, h2, h3{
+	font-family: var(--font-titels);
 }
 
 p, figcaption{
@@ -103,6 +93,18 @@ button, summary {
 	cursor: pointer;
 }
 
+a{ 
+	transition: 0.3s;
+}
+
+a:active{
+	transform: scale(0.8);
+	transition: 0.3s;
+}
+
+a:focus{
+	outline: 3px dashed var(--color-accent-kleur);
+}
 
 
 
@@ -130,7 +132,7 @@ header::after{
     left: 0;
     padding-top: 30px;
     background-position: 50%;
-    z-index: 0;
+    z-index: -10;
 }
 
 
@@ -159,13 +161,9 @@ header nav button{
 	background-color: white;
 }
 
-header h1{
-	margin:0;
-}
-
 header nav ul{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	flex-direction: column;
 	transform: translateY(100%);
 	position: fixed;
@@ -182,26 +180,8 @@ header.menuOpen nav ul{
 
 header.menuOpen nav ul li a{
 	color: var(--header-links-kleur-klein);
-}
-
-@media (min-width: 75em){
-	header nav ul{
-		display: flex;
-		padding-top: 1em;
-		justify-content: center;
-		flex-direction: row;
-		transform: translateY(0%);
-	}
-}
-
-header h1 img{
-	width: 5em;
-	position: fixed;
-	top: 0;
-	left: 50%;
-	right: 50%;
-	transform: translateX(-50%);
-	z-index: 10;
+	font-size: 1.5em;
+	margin-top: 2em;
 }
 
 header nav ul li{
@@ -239,11 +219,13 @@ header nav ul li a{
 	margin-left: 2em;	
 	margin-right: 2em;
 	font-family: var(--font-titels);
+	font-weight: bold;
 	text-decoration: none;
 	color: var(--header-links-kleur);
 	text-align: center;
 }
 
+/* Bron: Sanne */
 @media (min-width:75em) {
 	header nav{
 		position: relative;
@@ -255,380 +237,25 @@ header nav ul li a{
 	}
 
 	header nav ul{
+		display: flex;
+		padding-top: 1em;
+		justify-content: center;
+		flex-direction: row;
+		transform: translateY(0%);
 		position: relative;
 		background-color: transparent;
 	}
 
 	header.menuOpen nav ul li a{
 		color: var(--header-links-kleur);
+		font-size: 1em;
+		margin-top: 0;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-/************/
-/* SECTIONS */
-/************/
-
-section{
-	padding: 1em;
-}
-
-
-
-
-
-/****************/
-/* VIDEO SECTION*/
-/****************/
-
-section:nth-child(1){
-	background-image: url("../images/Achtergrond.jpeg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 50em;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;	
-}
-
-section:nth-child(1) button{
-	height: 5em;
-	width: 5em;
-	background-color: var(--button-kleur-videosectie);
-	border-radius: 5em;
-	border: none;
-}
-
-
-
-
-
-/***********************/
-/* PROEFLOKAAL SECTION */
-/***********************/
-
-section:nth-child(2)::before{
-	background-image: url("../images/divider.svg");
-	content: ".";
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: -6.5em;
-    left: 0;
-	right: 0;
-    background-position: 50%;
-    z-index: 0;
-}
-
-section:nth-child(2){
-	background-color: var(--color-huisstijl-rood);
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
-	
-}
-
-section:nth-child(2) div{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 1em;
-} 
-
-
-section:nth-child(2) div h2{
-	color: var(--h2titel-proeflokaal);
-}
-
-section:nth-child(2) div p{
-	color: var(--plattetekst-proeflokaal);
-	margin-top: 0;
-	margin-bottom: 1em;
-}
-
-section:nth-child(2) div a{
-	background-color: var(--link-licht);
-	color: var(--link-licht-tekst);
-	padding: 1em;
-	font-family: var(--font-titels);
-	text-decoration: none;
-	margin-top: 1em;
-	width: fit-content;
-}
-
-section:nth-child(2) div a:hover{
-	background-color: var(--link-hover);
-	color: var(--link-hover-tekst);
-}
-
-section:nth-child(2) div a:active{
-	background-color: var(--link-hover);
-	color: var(--link-hover-tekst);
-}
-
-section:nth-child(2) img{
-	width: auto;
-	margin: 1em;
-}
-
-@media (min-width:68em){
-	section:nth-child(2){
-		display: flex;
-		justify-content: center;
-		flex-direction: row;
-		align-items: center;
-	}
-
-	section:nth-child(2) div{
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		text-align: left;
-		width: 30em;
-	}
-	section:nth-child(2) img{
-		width: 30em;
-	}
-
-
-	section:nth-child(2) div a{
-		margin: 0;
-	}
-}
-
-
-
-/*********************/
-/* PRODUCTEN SECTION */
-/*********************/
-section:nth-child(3){
-	background-color: var(--color-huisstijl-geel);
-	width: 100%;
-}
-
-section:nth-child(3) ul{
-	display: flex;
-	justify-content: center;
-	gap:1em;
-	padding:1em;
-	flex-wrap: wrap;
-}
-
-section:nth-child(3) ul li{
-	background-color: var(--product-achtergrond);
-	width: 20em;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding:1em;
-}	
-
-section:nth-child(3) ul li figure img{
-	width: 100%;
-}
-
-section:nth-child(3) a{
-	background-color: var(--link-donker);
-	color: var(--link-donker-tekst);
-	padding: 1em;
-	font-family: var(--font-titels);
-	text-decoration: none;
-	margin-top:auto;
-}
-
-section:nth-child(3) a:hover{
-	background-color: var(--link-hover);
-	color: var(--link-hover-tekst);
-}
-
-section:nth-child(3) a:active{
-	background-color: var(--link-hover);
-	color: var(--link-hover-tekst);
-}
-
-
-
-
-
-/**********************/
-/* KEN JE ONS SECTION */
-/**********************/
-section:nth-child(4){
-	background-color: var(--kenjeons-achtergrond-kleur);
-	color: var(--h2titel-kenjeons);
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-section:nth-child(4) div{
-	margin: auto;
-	max-width: 30em;
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	order: 2;
-}
-
-
-section:nth-child(4) img{
-	width: 96%;
-	order: 1;
-}
-
-@media (min-width:62em){
-	section:nth-child(4){
-		padding-top: 10em;
-		padding-bottom: 10em;
-	}
-
-	section:nth-child(4) div{
-		order: 1;
-	}
-
-	section:nth-child(4) img{
-		order: 2;
-		max-width: 30em;
-	}
-}
-
-
-
-
-
-
-
-/*******************/
-/* VERHAAL SECTION */
-/*******************/
-section:nth-child(5){
-	background-image: url("../images/Strand_met_zonsondergang.jpeg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	width: 100%;
-	display: flex;
-	justify-content: right;
-	height: fit-content;
-	padding: 0;
-}
-
-section:nth-child(5) div{
-	background-color: var(--verhaal-achtergrond-kleur);
-	width: 100%;
-	height: 100%;
-	padding: 2em;
-	margin: 0;
-	color: var(--h2titel-verhaal);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
-@media (min-width:36em){
-	section:nth-child(5) div{
-		background-color: transparent;
-		background-image: url("../images/verfkwast-box.svg");
-		width: 30em;
-		height: 25em;
-		background-repeat: no-repeat;
-		background-size:contain;
-		margin: 2em;
-	}
-}
-
-section:nth-child(5) a{
-	background-color: var(--link-licht);
-	color: var(--link-licht-tekst);
-	padding: 1em;
-	font-family: var(--font-titels);
-	text-decoration: none;
-}
-
-section:nth-child(5) a:hover{
-	background-color: var(--link-hover);
-	color: var(--link-hover-tekst);
-}
-
-section:nth-child(5) a:active{
-	background-color: var(--link-hover);
-	color: var(--link-hover-tekst);
-}
-
-
-
-
-
-/***********************/
-/* NIEUWSBRIEF SECTION */
-/***********************/
-section:nth-child(6){
-	background-color: var(--color-huisstijl-wit);
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-section:nth-child(6) p{
-	text-align: center;
-	max-width: 40em;
-}
-
-section:nth-child(6) form{
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	font-family: var(--font-platte_tekst);
-	width: 100%;
-}
-
-section:nth-child(6) form input{
-	margin-bottom: 1em;
-}
-
-section:nth-child(6) form input:nth-of-type(5){
-	background-color: var(--disabled-button-achtergrond-kleur);
-	color: var(--disabled-button-tekst-kleur);
-	padding: 1em;
-	font-family: var(--font-titels);
-	font-size: 1em;
-	text-decoration: none;
-	border: none;
-	-webkit-appearance: none;
-}
-
-section:nth-child(6) form input:nth-of-type(-n+3){
-	width: 100%;
-	height: 2.5em;	
-	
-}
-
-section:nth-child(6) form label:nth-of-type(-n+3)::after {
-	content: "*";
-	color: var(--color-huisstijl-rood);
-}
-
-@media (min-width:36em){
-	section:nth-child(6) form{
-	max-width: 40em;
-	}
+/* Bron: Sanne */
+nav ul li a:hover{
+	color: var(--header-hover-tekst-kleur);
+	text-decoration: underline;
 }
 
 
@@ -641,54 +268,80 @@ section:nth-child(6) form label:nth-of-type(-n+3)::after {
 footer{
 	padding: 2em;
 	padding-bottom: 4em;
-	background-color: var(--color-huisstijl-rood);
-
+	background-color: var(--achtergrondkleur-footer);
 }
 
-footer hr{
-	margin-top: 2em;
-	border-top: 1px solid var(--color-huisstijl-wit);
-}
-
-footer div{
+footer section:nth-of-type(1){
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-footer div:nth-child(1){
-	justify-content: space-between;
+footer section img:first-child{
+	max-width: 15em;
 }
 
-footer div:nth-child(2) img{
+footer section div{
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+footer section div img:nth-child(-n+4){
 	max-width: 2em;
 	margin: .5em;
 }
 
-@media (min-width:30em){
-	
+@media (min-width: 36em){
+	footer section:nth-of-type(1){
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+	footer section div{
+		margin: 0;
+	}
+
 
 }
 
-footer img:nth-of-type(1){
-	max-width: 15em;
-}
-
-footer ul{
+footer section ul{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-left: -2.5em;
+	padding-inline-start: 0;
 }
 
-footer ul li{
+footer section ul li{
 	margin: 1em;
 	
 } 
 
-footer ul li a{
+footer section ul li a{
 	color: var(--footer-plattetekst);
 	text-decoration: none;
 }
 
-footer ul li a:hover{
+footer section ul li a::after{
+	content: "|";
+	margin-left: 2em;
+}
+
+footer section ul li a:hover{
 	text-decoration: underline;
 }
+
+footer section:nth-of-type(1):after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--divider-kleur);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* font-size: clamp(1.5em, 6vw, 2em);*/
+/* minimale maat, flexibele maat, grootste maat */
+
