@@ -318,8 +318,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Bron Header positie wijziging(Sanne): het sticky maken van de header dan de nav fixed aan de onderkant als een uitklapmenu en wanneer het scherm 75em of groter wordt, wordt de nav position relative waardoor de nav op de plek van de header komt te staan.
+
+  2. Bron Header uitklapmenu(Sanne): het uit het beeld houden van de ul wanneer het scherm kleiner is dan 75 em, wanneer deze opengeklikt wordt gaat komt het in het scherm door middel van transform: translateY: 0;. Als het scherm groter wordt gemaakt dan 75em terwijl het menu open is schiet hij ook weer terug naar translateY: 100%; zodat hij weer buiten beeld gaat.
 
 </details>

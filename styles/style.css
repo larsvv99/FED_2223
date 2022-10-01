@@ -142,14 +142,14 @@ header::after{
 /*******/
 /* NAV */
 /*******/
-
+/* Bron 1 Header positie wijziging(Sanne) */
 header nav {
 	position: fixed;
 	bottom: 0; 
 	left: 0;
 	right:0;
 	padding: .5em;
-	background-color: white;
+	background-color: var(--header-achtergrond-kleur);
 	z-index: 100;
 
 }
@@ -161,6 +161,7 @@ header nav button{
 	background-color: white;
 }
 
+/* Bron Header uitklapmenu(Sanne) */
 header nav ul{
 	display: flex;
 	justify-content: center;
@@ -174,6 +175,7 @@ header nav ul{
 	list-style: none;
 }
 
+/* Bron Header uitklapmenu(Sanne) */
 header.menuOpen nav ul{
 	transform: translateY(0);
 }
@@ -225,7 +227,8 @@ header nav ul li a{
 	text-align: center;
 }
 
-/* Bron: Sanne */
+/* Bron 1 Header positie wijziging(Sanne) */
+/* Bron Header uitklapmenu(Sanne) */
 @media (min-width:75em) {
 	header nav{
 		position: relative;
@@ -252,7 +255,7 @@ header nav ul li a{
 		margin-top: 0;
 	}
 }
-/* Bron: Sanne */
+
 nav ul li a:hover{
 	color: var(--header-hover-tekst-kleur);
 	text-decoration: underline;
