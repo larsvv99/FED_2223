@@ -289,7 +289,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit ging goed/Heb ik geleerd: 
   Ik heb vooral geleerd om een website responsive te maken, nou was dit ook de keuze voor mijn opdracht. Het gaat nu meer uit mijn hoofd dan dat ik telkens moet kijken wat er ook elkaar moet staan. Ik weet meer termen uit mijn hoofd, weet goed antwoord te geven op vragen over de code en weet fouten vaak sneller en zelf op te lossen. Daarnaast als iemand met een oplossing komt voor een probleem, begrijp ik zelf ook gelijk wat oplossing inhoudt.
 
-  <img src="readme-images/responsive,jpg" width="375px" alt="mobile responsive">
+  <img src="readme-images/responsive.jpg" width="375px" alt="mobile responsive">
   <img src="readme-images/responsive2.jpg" width="375px" alt="desktop responsive">
 
 
