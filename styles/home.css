@@ -405,10 +405,11 @@ main section:nth-child(6) button[disabled]{
 	border: none;
 }
 
-.enabled{
+main section:nth-child(6) button:not([disabled]){
 	background-color: var(--link-active);
 	color: var(--link-active-tekst);
 }
+
 
 main section:nth-child(6) p{
 	text-align: center;
@@ -421,8 +422,13 @@ main section:nth-child(6) form{
 	width: 100%;
 }
 
-main section:nth-child(6) form input{
+main section:nth-child(6) form input[type="text"],
+main section:nth-child(6) form input[type="email"]{
 	margin-bottom: 1em;
+}
+
+input[type="checkbox"]{
+	margin: 0;
 }
 
 main section:nth-child(6) form input:nth-of-type(5){
@@ -452,4 +458,5 @@ main section:nth-child(6) form label:nth-of-type(-n+3)::after {
 	max-width: 40em;
 	}
 }
+
 

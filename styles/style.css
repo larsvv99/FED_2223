@@ -99,7 +99,6 @@ a{
 
 a:active{
 	transform: scale(0.8);
-	transition: 0.3s;
 }
 
 a:focus{
@@ -325,10 +324,13 @@ footer section ul li a{
 	text-decoration: none;
 }
 
-footer section ul li a::after{
-	content: "|";
-	margin-left: 2em;
+@media (min-width: 30em){
+	footer section ul li:not(:last-of-type) a::after{
+		content: "|";
+		margin-left: 2em;
+	}
 }
+
 
 footer section ul li a:hover{
 	text-decoration: underline;
@@ -344,6 +346,8 @@ footer section:nth-of-type(1):after{
     left: 50%;
     transform: translateX(-50%);
 }
+
+
 
 /* font-size: clamp(1.5em, 6vw, 2em);*/
 /* minimale maat, flexibele maat, grootste maat */

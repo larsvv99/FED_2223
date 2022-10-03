@@ -62,14 +62,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenreader
   -	Screen reader is goed maar skipt alle afbeeldingen
-  -	Een var aan de afbeelding toevoegen
-
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  -	Een var aan de afbeelding toevoegen
 
 
   #### Muis en Toetsenbord 
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  - Site werkt goed door er doorheen te tabben.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
@@ -78,6 +78,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   -	Er is weinig content ten opzichte van ruimte daardoor staat alles heel erg uit elkaar. Voor iemand met Parkinson duurt het dan erg lang voordat hij door de site heen is.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Minder content per pagina of een navigatie onder de header om sneller naar de secties te gaan.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
@@ -96,6 +97,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Contrast vergroten, meer verschil in hover/focus/active states
 
 </details>
 
@@ -110,10 +112,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/HTML_attributen.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/HTML_attributen2.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -137,13 +137,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | - Hoe kan ik het beste mijn css structureren?  | en dit             | en ik dit    | en dan ik dat    |
+  | - background-image werkt niet, waar ligt dat aan? | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | - Is het gebruikelijk om af te wisselen in display grid en flex?        | ...                | ...          | ...              |
 
-- Hoe kan ik het beste mijn css structureren?
-- background-image werkt niet, waar ligt dat aan?
-- Is het gebruikelijk om af te wisselen in display grid en flex?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -165,22 +162,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   De menu was wat lastiger om te maken maar met een beetje ondersteuning van Sanne ging het
   uiteindelijk wel. Ook ben ik begonnen met de productensectie maar de buttons bleven uitsteken.
+
   <img src="readme-images/Producten.jpg" width="375px" alt="uitomst opdracht 1">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Lars    | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-  - Hoe kan ik het beste mijn links uitlijnen ten opzichte van?
-  - De icons kan ik het beste met noun project worden gelinkt toch?
-  - Hoe kan ik het beste de uitklapmenu's opbouwen
-  - Hoe komt texels beleving recht onder elkaar als het scherm kleiner wordt?
-  
+  | - Hoe kan ik het beste mijn links uitlijnen ten opzichte van?  | en dit             | en ik dit    | en dan ik dat    |
+  | - De icons kan ik het beste met noun project worden gelinkt toch? | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | - Hoe kan ik het beste de uitklapmenu's opbouwen          | ...                | ...          | ...              |
+  | - Hoe komt texels beleving recht onder elkaar als het scherm kleiner wordt?         | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -206,29 +199,40 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - Het responsive maken van de header waardoor er geen woorden meer wegvallen
+  - active states toegevoegt aan de buttons en a's.
+  - Ook de focus states zijn verbeterd waardoor ze beter zichtbaar zijn.
+
 
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  De screenreader werkt goed. 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Er kan worden genavigeerd door verschillende elementen, maar ook headers etc.. Door semantisch coderen
 
 
   #### Muis en Toetsenbord 
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Ook door de site tabben gaat goed.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Semantisch coderen
 
 
   #### Motoriek (shocks, elastiekjes)
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Het is een redelijk overzichtelijke en simpele site waardoor hier weinig voor aangepast hoefte te worden.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  De site is voor dit stuk voornamelijk hetzelfde gehouden alleen is de pagina ingekort.
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Alle kleuren zijn zodanig aangepast zodat alles goed leesbaar is. 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Dit onder andere door middel van duidelijke :focus, :hover, :active states
 
 </details>
 
@@ -251,34 +255,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | LARS      | BRYAN       |   ZENNAY   | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-  BRYAN
-  - kan ik 2 style sheet gebruiken of moet ik meteen 3 gebruiken? 
-  - ziet mijn html en css code er to nu toe er goed uit?  
-  - hoe verandere ik de kleur van de svg bestand in css
-
-  LARS
-  - Hoe krijg ik een andere kleur outline geven
-  - Hoe kan ik het beste de tekst na het aanvink vakje plaatsen
-  - Hoe krijg ik het voor elkaar om een button disabled te maken en vervolgens, abled te maken als er op de aanvinkinput wordt      geklikt?
-
-  ZENNAY
-  - Hoe kan ik mijn site responsive maken en de portfolio blokken naast elkaar zetten als het scherm groter word
-  - Hoe krijg ik een streepje achter mijn tekst zoals eerst.
-  - Hoe krijg ik mijn svg logo mooi in het scherm.
+  | - Hoe krijg ik een andere kleur outline geven  | - kan ik 2 style sheet gebruiken of moet ik meteen 3 gebruiken?             | - Hoe kan ik mijn site responsive maken en de portfolio blokken naast elkaar zetten als het scherm groter word
+   | en dan ik dat    |
+  | - Hoe kan ik het beste de tekst na het aanvink vakje plaatsen| - ziet mijn html en css code er to nu toe er goed uit?  | - Hoe krijg ik een streepje achter mijn tekst zoals eerst.| dit wil ik zeker |
+  | - Hoe krijg ik het voor elkaar om een button disabled te maken en vervolgens, abled te maken als er op de aanvinkinput wordt      geklikt?           | - hoe verandere ik de kleur van de svg bestand in css               | - Hoe krijg ik mijn svg logo mooi in het scherm.       | ...              |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - maak gebruik van een border
+  - geen hr's dat is vieze code maak gebruik van :after of border-bottom
+  - button op disabled zetten en vervolgens via javascript de functie te maken dat als de checkbox wordt aangevinkt, dat dan de button enabled wordt.
 
 </details>
 
@@ -292,19 +281,35 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/responsive2.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/bierenpagina.jpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb vooral geleerd om een website responsive te maken, nou was dit ook de keuze voor mijn opdracht. Het gaat nu meer uit mijn hoofd dan dat ik telkens moet kijken wat er ook elkaar moet staan. Ik weet meer termen uit mijn hoofd, weet goed antwoord te geven op vragen over de code en weet fouten vaak sneller en zelf op te lossen. Daarnaast als iemand met een oplossing komt voor een probleem, begrijp ik zelf ook gelijk wat oplossing inhoudt.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/responsive,jpg" width="375px" alt="mobile responsive">
+  <img src="readme-images/responsive2.jpg" width="375px" alt="desktop responsive">
+
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Kleine dingetjes/slordigheden zoals: 
+  - De play button op de homepagina met de bijbehorende popup video.
+  - Focus state bij bepaalde stukken niet te zien door dezelfde achtergrond.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Maar wat ik vooral lastig vond, maar wel gelukt is waren:
+  - De responsive header plus uitschuifmenu
+  - :after styling voor de secties
+  - en dingen op de juiste positie zetten 
+
+  <img src="readme-images/youtube_play.jpg" width="375px" alt="youtube filmpje + button">
+
+  <img src="readme-images/header.jpg" width="375px" alt="header">
+  <img src="readme-images/header_smallscreen.jpg" width="375px" alt="header mobile">
+  <img src="readme-images/header_uitgeklapt.jpg" width="375px" alt="header uitgeklapt">
+
+  <img src="readme-images/positionering.jpg" width="375px" alt="positionering vlak">
 </details>
 
 

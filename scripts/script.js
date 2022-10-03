@@ -21,10 +21,9 @@ function acceptTerms() {
 	var formButton = document.querySelector("main section:nth-child(6) button");
 	if (formButton.disabled == true) {
 		formButton.disabled = false;
-    formButton.classList.add("enabled");
+		
 	} else {
 		formButton.disabled = true;
-    formButton.classList.remove("enabled");
 	}
 	
 }
