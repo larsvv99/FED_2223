@@ -145,6 +145,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
   - Je kan gebruik maken van een hulplijst van Sanne
+  - Image niet goed gelinkt 
 
 
 
@@ -281,8 +282,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/responsive2.jpg" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/bierenpagina.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/responsive2.jpg" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/Bierenpagina.jpg" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
